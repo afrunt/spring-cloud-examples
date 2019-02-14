@@ -7,7 +7,7 @@ Spin up the Vault, H2 and RabbitMQ to work with applications within your IDE
 Or you can run the full example with 
 
 ```bash
- docker-compose -f docker-compose-infrastructure.yml -f docker-compose-full.yml up
+ docker-compose -f docker-compose-infrastructure.yml -f docker-compose-apps.yml up
 ```
 
 Change settings:
@@ -18,5 +18,4 @@ Priorities are the next:
   - Vault
   - JDBC
   - Files
-  
-![Diagram](static/general-diagram.png)
+
