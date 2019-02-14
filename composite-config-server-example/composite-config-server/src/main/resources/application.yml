@@ -1,0 +1,40 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: ConfigServer
+  datasource:
+    url: jdbc:h2:tcp://localhost:1521/test
+    username: sa
+  rabbitmq:
+    host: localhost
+    port: 5672
+  cloud:
+    bus:
+      trace:
+        enabled: true
+    config:
+
+      server:
+        jdbc:
+          order: 0
+
+        vault:
+          order: 1
+          kv-version: 2
+
+        native:
+          order: 2
+          search-locations:
+            - "file:./native-config"
+
+
+  profiles:
+    active: vault, jdbc, native
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,0 +1,22 @@
+version: "3"
+services:
+  config-server:
+    image: afrunt/composite-config-server
+    ports:
+      - 9000:9000
+    volumes:
+      - ./compose/config-server-config/config:/deployment/config
+      - ./compose/config-server-config/native-config:/deployment/native-config
+    depends_on:
+      - h2
+      - vault
+      - rabbitmq
+
+  composite-configurable-service:
+    image: afrunt/composite-configurable-service
+    ports:
+      - 8080:8080
+    volumes:
+      - ./compose/composite-configurable-service-config:/deployment/config
+    depends_on:
+      - config-server

@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: CompositeConfigurableService
+  cloud:
+    config:
+      uri: http://localhost:9000/
+      fail-fast: true
+      token: vault_root
+      label: dev
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+

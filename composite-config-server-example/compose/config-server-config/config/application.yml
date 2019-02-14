@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://h2:1521/test
+  rabbitmq:
+    host: rabbitmq
+  cloud:
+    config:
+      server:
+        native:
+          search-locations:
+            - "file:./native-config"
+        vault:
+          host: vault

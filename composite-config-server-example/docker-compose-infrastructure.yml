@@ -1,0 +1,30 @@
+version: "3"
+services:
+  h2:
+    image: afrunt/h2
+    ports:
+      - 1521:1521
+      - 81:81
+    volumes:
+      - ./compose/data/h2:/opt/h2-data
+    depends_on:
+      - vault
+
+  vault:
+    image: afrunt/vault
+    ports:
+      - 8200:8200
+    environment:
+      - "VAULT_DEV_ROOT_TOKEN_ID=vault_root"
+    cap_add:
+      - IPC_LOCK
+    depends_on:
+      - rabbitmq
+
+  rabbitmq:
+    image: afrunt/rabbitmq
+    ports:
+      - 5671:5671
+      - 5672:5672
+      - 25672:25672
+      - 15672:15672

@@ -1,0 +1,11 @@
+spring:
+  rabbitmq:
+    host: rabbitmq
+  cloud:
+    config:
+      uri: http://config-server:9000/
+      fail-fast: true
+      token: vault_root
+      label: dev
+      retry:
+        max-attempts: 30
