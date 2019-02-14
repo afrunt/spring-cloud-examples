@@ -1,4 +1,4 @@
-## Composite Spring Cloud Config Server with Spring Cloud Bus client service
+## Composite (JDBC/Vault/Local Files) Spring Cloud Config Server with Spring Cloud Bus client service
 Spin up the Vault, H2 and RabbitMQ to work with applications within your IDE
 ```bash
  docker-compose -f docker-compose-infrastructure.yml up
