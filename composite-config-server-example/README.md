@@ -10,6 +10,10 @@ Or you can run the full example with
  docker-compose -f docker-compose-infrastructure.yml -f docker-compose-full.yml up
 ```
 
+Change settings:
+  - Play with Vault parameters: ![http://localhost:8200/ui/vault/auth](http://localhost:8200/ui/vault/auth)
+  - Change parameter via H2 console: ![http://localhost:81/](http://localhost:81/)
+  
 Priorities are the next:
   - Vault
   - JDBC
