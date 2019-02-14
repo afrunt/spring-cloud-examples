@@ -12,7 +12,7 @@ Or you can run the full example with
 
 Change settings:
   - Play with Vault parameters: [http://localhost:8200/ui/vault/auth](http://localhost:8200/ui/vault/auth)
-  - Change parameter via H2 console: [http://localhost:81/](http://localhost:81/)
+  - Change parameters via H2 console: [http://localhost:81/](http://localhost:81/)
   
 Priorities are the next:
   - Vault
