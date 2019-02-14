@@ -17,12 +17,13 @@ spring:
     config:
 
       server:
-        jdbc:
-          order: 0
 
         vault:
-          order: 1
+          order: 0
           kv-version: 2
+
+        jdbc:
+          order: 1
 
         native:
           order: 2

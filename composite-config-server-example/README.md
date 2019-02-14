@@ -9,3 +9,10 @@ Or you can run the full example with
 ```bash
  docker-compose -f docker-compose-infrastructure.yml -f docker-compose-full.yml up
 ```
+
+Priorities are the next:
+  - Vault
+  - JDBC
+  - Files
+  
+![Diagram](static/general-diagram.png)
