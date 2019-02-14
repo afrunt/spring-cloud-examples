@@ -19,12 +19,12 @@ Priorities are the next:
   - JDBC
   - Files
 
-Refresh application configuration
+Refresh application configuration:
 ```bash
 curl -X POST http://localhost:8080/actuator/refresh
 ```
 
-Refresh all applications 
+Refresh all applications:
 ```bash
 curl -X POST http://localhost:8080/actuator/bus-refresh
 ```
