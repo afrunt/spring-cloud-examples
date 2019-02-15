@@ -10,6 +10,8 @@ Or you can run the full example with
  docker-compose -f docker-compose-infrastructure.yml -f docker-compose-apps.yml up
 ```
 
+Open [http://localhost:8080/info](http://localhost:8080/info) to see the current value of the setting
+
 Change settings:
   - Play with Vault parameters: [http://localhost:8200/ui/vault/auth](http://localhost:8200/ui/vault/auth) token is vault_root
   - Change parameters via H2 console: [http://localhost:81/](http://localhost:81/)
@@ -33,3 +35,5 @@ Refresh all applications:
 ```bash
 curl -X POST http://localhost:8080/actuator/bus-refresh
 ```
+
+[![How to run the example locally](http://img.youtube.com/vi/EI0pt8GJ0cY/0.jpg)](http://www.youtube.com/watch?v=EI0pt8GJ0cY)
