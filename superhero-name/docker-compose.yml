@@ -1,0 +1,44 @@
+version: "3"
+services:
+  eureka:
+    image: afrunt/spring-cloud-examples/superhero-name-eureka-server
+    ports:
+      - 8000:8000
+    environment:
+      - "JAVA_OPTIONS=-Deureka.client.service-url.defaultZone=http://eureka:8000/eureka"
+
+  first-inittial-service:
+    image: afrunt/spring-cloud-examples/first-initial-service
+    ports:
+      - 8081:8081
+    environment:
+      - "JAVA_OPTIONS=-Deureka.client.service-url.defaultZone=http://eureka:8000/eureka"
+    depends_on:
+      - eureka
+
+  middle-inittial-service:
+    image: afrunt/spring-cloud-examples/middle-initial-service
+    ports:
+      - 8082:8082
+    environment:
+      - "JAVA_OPTIONS=-Deureka.client.service-url.defaultZone=http://eureka:8000/eureka"
+    depends_on:
+      - eureka
+
+  last-inittial-service:
+    image: afrunt/spring-cloud-examples/last-initial-service
+    ports:
+      - 8083:8083
+    environment:
+      - "JAVA_OPTIONS=-Deureka.client.service-url.defaultZone=http://eureka:8000/eureka"
+    depends_on:
+      - eureka
+
+  superhero-name-web:
+    image: afrunt/spring-cloud-examples/superhero-name-web
+    ports:
+      - 8080:8080
+    environment:
+      - "JAVA_OPTIONS=-Deureka.client.service-url.defaultZone=http://eureka:8000/eureka"
+    depends_on:
+      - eureka

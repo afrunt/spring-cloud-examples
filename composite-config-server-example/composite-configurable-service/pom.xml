@@ -68,7 +68,7 @@
 
                     <images>
                         <image>
-                            <name>afrunt/${project.artifactId}:${project.parent.version}</name>
+                            <name>afrunt/spring-cloud-examples/${project.artifactId}:${project.parent.version}</name>
                             <alias>dockerfile</alias>
                             <build>
                                 <dockerFileDir>${project.basedir}</dockerFileDir>

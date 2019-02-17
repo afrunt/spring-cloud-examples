@@ -1,7 +1,7 @@
 version: "3"
 services:
   config-server:
-    image: afrunt/composite-config-server
+    image: afrunt/spring-cloud-examples/composite-config-server
     ports:
       - 9000:9000
     volumes:
@@ -13,7 +13,7 @@ services:
       - rabbitmq
 
   composite-configurable-service:
-    image: afrunt/composite-configurable-service
+    image: afrunt/spring-cloud-examples/composite-configurable-service
     ports:
       - 8080:8080
     volumes:

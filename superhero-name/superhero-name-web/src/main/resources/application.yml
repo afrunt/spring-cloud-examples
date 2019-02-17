@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: SuperheroNameWeb
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka
+feign:
+  hystrix:
+    enabled: true

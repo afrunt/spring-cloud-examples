@@ -1,6 +1,4 @@
 
-/docker-images/target/
-/composite-config-server-example/composite-config-server/target/
-/composite-config-server-example/composite-configurable-service/target/
-/composite-config-server-example/composite-configurable-service/composite-configurable-service.iml
+*/target/
+*.iml
 /composite-config-server-example/compose/data/
