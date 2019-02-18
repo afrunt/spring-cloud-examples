@@ -15,3 +15,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8000/eureka
+    eureka-connection-idle-timeout-seconds: 1
+    registry-fetch-interval-seconds: 10

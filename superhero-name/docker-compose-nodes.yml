@@ -1,0 +1,28 @@
+version: "3"
+services:
+  first-initial-service-2:
+    image: afrunt/spring-cloud-examples/first-initial-service
+    ports:
+      - 9081:9081
+    environment:
+      - "JAVA_OPTIONS=-Deureka.client.service-url.defaultZone=http://eureka:8000/eureka -Dserver.port=9081"
+    depends_on:
+      - eureka
+
+  middle-initial-service-2:
+    image: afrunt/spring-cloud-examples/middle-initial-service
+    ports:
+      - 9082:9082
+    environment:
+      - "JAVA_OPTIONS=-Deureka.client.service-url.defaultZone=http://eureka:8000/eureka -Dserver.port=9082"
+    depends_on:
+      - eureka
+
+  last-initial-service-2:
+    image: afrunt/spring-cloud-examples/last-initial-service
+    ports:
+      - 9083:9083
+    environment:
+      - "JAVA_OPTIONS=-Deureka.client.service-url.defaultZone=http://eureka:8000/eureka -Dserver.port=9083"
+    depends_on:
+      - eureka

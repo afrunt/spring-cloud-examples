@@ -49,3 +49,8 @@ Refresh the page with answer and see, what's happening with Hystrix Dashboard.
 ![hystrix-open-circuits](static/hystrix-open-circuits.png "hystrix-open-circuits")
 
 [![Superhero Name Example. How to run](http://img.youtube.com/vi/ftBV-afsrDY/0.jpg)](http://www.youtube.com/watch?v=ftBV-afsrDY)
+
+To run the example with 2 nodes of each REST service (Ribbon will care about client-side load balancing), you need to start docker-compose using the command below:
+```bash
+docker-compose -f docker-compose.yml -f docker-compose-nodes.yml up
+```
