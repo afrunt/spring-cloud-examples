@@ -1,8 +1,8 @@
-FROM openjdk:11.0.1
+FROM afrunt/spring-cloud-examples/java-base
 RUN mkdir /deployment
 
 ENV APP_FILE_NAME app.jar
-ENV MEM_MAX 128m
+ENV MEM_MAX 256m
 ENV JAVA_OPTIONS ""
 ENV APP_OPTIONS ""
 

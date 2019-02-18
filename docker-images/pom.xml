@@ -20,6 +20,28 @@
                     <useColor>true</useColor>
                     <images>
                         <image>
+                            <name>afrunt/spring-cloud-examples/java-base:${project.parent.version}</name>
+                            <alias>dockerfile</alias>
+                            <build>
+                                <dockerFileDir>${project.basedir}/src/main/docker/java-base</dockerFileDir>
+                                <tags combine.children="append">
+                                    <tag>latest</tag>
+                                </tags>
+                            </build>
+                        </image>
+
+                        <image>
+                            <name>afrunt/spring-cloud-examples/spring-boot-base:${project.parent.version}</name>
+                            <alias>dockerfile</alias>
+                            <build>
+                                <dockerFileDir>${project.basedir}/src/main/docker/spring-boot-base</dockerFileDir>
+                                <tags combine.children="append">
+                                    <tag>latest</tag>
+                                </tags>
+                            </build>
+                        </image>
+
+                        <image>
                             <name>afrunt/spring-cloud-examples/rabbitmq:${project.parent.version}</name>
                             <alias>dockerfile</alias>
                             <build>
@@ -45,17 +67,6 @@
                             <alias>dockerfile</alias>
                             <build>
                                 <dockerFileDir>${project.basedir}/src/main/docker/vault</dockerFileDir>
-                                <tags combine.children="append">
-                                    <tag>latest</tag>
-                                </tags>
-                            </build>
-                        </image>
-
-                        <image>
-                            <name>afrunt/spring-cloud-examples/spring-boot-base:${project.parent.version}</name>
-                            <alias>dockerfile</alias>
-                            <build>
-                                <dockerFileDir>${project.basedir}/src/main/docker/spring-boot-base</dockerFileDir>
                                 <tags combine.children="append">
                                     <tag>latest</tag>
                                 </tags>
