@@ -51,3 +51,4 @@ docker-compose stop last-inittial-service
 ```
 
 Refresh the page with answer and see, what's happening with Hystrix Dashboard.
+![hystrix-open-circuits](static/hystrix-open-circuits.png "hystrix-open-circuits")
