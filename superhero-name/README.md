@@ -6,11 +6,6 @@ Services and consumer uses Eureka for service discovery.
 Consumer (superhero-name-web) uses Ribbon for client-side load balancing and Hystrix for circuit breaking.
 ![diagram](static/diagram.png "diagram")
 
-Build the project:
-```bash
-mvn clean package docker:build
-```
-
 Go to superhero directory:
 ```bash
 cd superhero-name
@@ -52,3 +47,5 @@ docker-compose stop last-initial-service
 
 Refresh the page with answer and see, what's happening with Hystrix Dashboard.
 ![hystrix-open-circuits](static/hystrix-open-circuits.png "hystrix-open-circuits")
+
+[![Superhero Name Example. How to run](http://img.youtube.com/vi/ftBV-afsrDY/0.jpg)](http://www.youtube.com/watch?v=ftBV-afsrDY)
