@@ -35,3 +35,19 @@ When all 3 REST services are down, you will always get the name "Stupid Jumping 
 
 Click the button under the answer to see the Hystrix Dashboard
 ![hystrix](static/hystrix.png "hystrix")
+
+Turn off REST services
+Run docker-compose to start all applications:
+```bash
+docker-compose stop first-inittial-service
+```
+
+```bash
+docker-compose stop middle-inittial-service
+```
+
+```bash
+docker-compose stop last-inittial-service
+```
+
+Refresh the page with answer and see, what's happening with Hystrix Dashboard.
