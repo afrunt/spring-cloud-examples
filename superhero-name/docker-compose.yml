@@ -25,7 +25,7 @@ services:
     depends_on:
       - eureka
 
-  last-inittial-service:
+  last-initial-service:
     image: afrunt/spring-cloud-examples/last-initial-service
     ports:
       - 8083:8083
