@@ -13,13 +13,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <groupId>com.afrunt.examples</groupId>
+            <artifactId>spring-boot-web-dependencies</artifactId>
         </dependency>
 
         <dependency>

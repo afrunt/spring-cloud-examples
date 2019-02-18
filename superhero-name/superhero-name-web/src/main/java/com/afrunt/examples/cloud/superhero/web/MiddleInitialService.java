@@ -29,7 +29,7 @@ public class MiddleInitialService {
     }
 
     public Map<String, String> partFallback(String letter, Throwable ex) {
-        LOGGER.error("Fuck, cannot retrieve the middle part of the name", ex);
+        LOGGER.error("Fuck, cannot retrieve the middle part of the name");
         return Map.of("part", "Jumping");
     }
 

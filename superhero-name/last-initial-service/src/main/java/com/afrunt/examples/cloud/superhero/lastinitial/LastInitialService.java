@@ -1,5 +1,7 @@
 package com.afrunt.examples.cloud.superhero.lastinitial;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -14,6 +16,7 @@ import java.util.stream.Stream;
  */
 @RestController
 public class LastInitialService {
+    private static final Logger LOGGER = LoggerFactory.getLogger(LastInitialService.class);
     private Map<String, String> parts = Stream
             .of(
                     "Alien", "Beast", "Corpse", "Dragon", "Eagle", "Fairy", "Giant", "Hawk", "Imp", "Jaguar", "Kid",
@@ -28,6 +31,8 @@ public class LastInitialService {
         if (System.currentTimeMillis() % 10 == 0) {
             throw new RuntimeException("Boom! Cannot connect to database");
         }
-        return Map.of("part", parts.get(letter.toUpperCase()));
+        String part = parts.get(letter.toUpperCase());
+        LOGGER.info("{} -> {}", letter, part);
+        return Map.of("part", part);
     }
 }

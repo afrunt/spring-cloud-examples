@@ -1,5 +1,7 @@
 package com.afrunt.examples.cloud.superhero.firstinitial;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -14,6 +16,8 @@ import java.util.stream.Stream;
  */
 @RestController
 public class FirstInitialService {
+    private static final Logger LOGGER = LoggerFactory.getLogger(FirstInitialService.class);
+
     private Map<String, String> parts = Stream
             .of("Amazing", "Bombastic", "Chivalrous", "Daring", "Extraordinary", "Fantastic", "Gritty", "Helpful",
                     "Incredible", "Jaunty", "Killer", "Lowly", "Marvelous", "Nefarious", "Odious", "Poisonous", "Quixotic",
@@ -26,6 +30,8 @@ public class FirstInitialService {
         if (System.currentTimeMillis() % 10 == 0) {
             throw new RuntimeException("Shit happens");
         }
-        return Map.of("part", parts.get(letter.toUpperCase()));
+        String part = parts.get(letter.toUpperCase());
+        LOGGER.info("{} -> {}", letter, part);
+        return Map.of("part", part);
     }
 }

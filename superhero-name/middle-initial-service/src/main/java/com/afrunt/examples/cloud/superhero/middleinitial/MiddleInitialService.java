@@ -1,5 +1,7 @@
 package com.afrunt.examples.cloud.superhero.middleinitial;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -14,6 +16,8 @@ import static java.util.Map.entry;
  */
 @RestController
 public class MiddleInitialService {
+    private static final Logger LOGGER = LoggerFactory.getLogger(MiddleInitialService.class);
+
     private Map<String, String> parts = Map.ofEntries(
             entry("A", "Flying"),
             entry("B", "Growing"),
@@ -49,6 +53,9 @@ public class MiddleInitialService {
         if (System.currentTimeMillis() % 10 == 0) {
             throw new RuntimeException("Damn! Zombie apocalypse is here");
         }
-        return Map.of("part", parts.get(letter.toUpperCase()));
+
+        String part = parts.get(letter.toUpperCase());
+        LOGGER.info("{} -> {}", letter, part);
+        return Map.of("part", part);
     }
 }

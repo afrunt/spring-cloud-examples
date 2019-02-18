@@ -25,7 +25,7 @@ public interface FirstInitialService {
 
         @Override
         public FirstInitialService create(Throwable throwable) {
-            LOGGER.error("Unable to get first part of the name", throwable);
+            LOGGER.error("Unable to get first part of the name");
             return request -> Map.of("part", "Stupid");
         }
     }
