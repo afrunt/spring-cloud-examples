@@ -39,15 +39,15 @@ Click the button under the answer to see the Hystrix Dashboard
 Turn off REST services
 Run docker-compose to start all applications:
 ```bash
-docker-compose stop first-inittial-service
+docker-compose stop first-initial-service
 ```
 
 ```bash
-docker-compose stop middle-inittial-service
+docker-compose stop middle-initial-service
 ```
 
 ```bash
-docker-compose stop last-inittial-service
+docker-compose stop last-initial-service
 ```
 
 Refresh the page with answer and see, what's happening with Hystrix Dashboard.
