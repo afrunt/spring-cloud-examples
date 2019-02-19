@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: ConsulConfigApp
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

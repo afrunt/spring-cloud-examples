@@ -13,6 +13,7 @@
         <module>dependencies</module>
         <module>composite-config-server-example</module>
         <module>superhero-name</module>
+        <module>consul-config-example</module>
     </modules>
 
     <properties>

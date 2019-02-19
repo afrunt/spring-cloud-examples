@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  consul-config-example:
+    image: afrunt/spring-cloud-examples/consul-config-example
+    ports:
+      - 8080:8080
+    environment:
+      - "JAVA_OPTIONS=-Dspring.cloud.consul.host=consul"
+    depends_on:
+      - consul
