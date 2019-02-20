@@ -20,7 +20,7 @@
                     <useColor>true</useColor>
                     <images>
                         <image>
-                            <name>afrunt/spring-cloud-examples/java-base:${project.parent.version}</name>
+                            <name>afrunt/spring-cloud-examples-java-base:${project.parent.version}</name>
                             <alias>dockerfile</alias>
                             <build>
                                 <dockerFileDir>${project.basedir}/src/main/docker/java-base</dockerFileDir>
@@ -31,7 +31,7 @@
                         </image>
 
                         <image>
-                            <name>afrunt/spring-cloud-examples/spring-boot-base:${project.parent.version}</name>
+                            <name>afrunt/spring-cloud-examples-spring-boot-base:${project.parent.version}</name>
                             <alias>dockerfile</alias>
                             <build>
                                 <dockerFileDir>${project.basedir}/src/main/docker/spring-boot-base</dockerFileDir>
@@ -42,7 +42,7 @@
                         </image>
 
                         <image>
-                            <name>afrunt/spring-cloud-examples/rabbitmq:${project.parent.version}</name>
+                            <name>afrunt/spring-cloud-examples-rabbitmq:${project.parent.version}</name>
                             <alias>dockerfile</alias>
                             <build>
                                 <dockerFileDir>${project.basedir}/src/main/docker/rabbitmq</dockerFileDir>
@@ -52,7 +52,7 @@
                             </build>
                         </image>
                         <image>
-                            <name>afrunt/spring-cloud-examples/h2:${project.parent.version}</name>
+                            <name>afrunt/spring-cloud-examples-h2:${project.parent.version}</name>
                             <alias>dockerfile</alias>
                             <build>
                                 <dockerFileDir>${project.basedir}/src/main/docker/h2</dockerFileDir>
@@ -63,7 +63,7 @@
                         </image>
 
                         <image>
-                            <name>afrunt/spring-cloud-examples/vault:${project.parent.version}</name>
+                            <name>afrunt/spring-cloud-examples-vault:${project.parent.version}</name>
                             <alias>dockerfile</alias>
                             <build>
                                 <dockerFileDir>${project.basedir}/src/main/docker/vault</dockerFileDir>
