@@ -1,4 +1,4 @@
-FROM afrunt/spring-cloud-examples/java-base
+FROM afrunt/spring-cloud-examples-java-base
 RUN mkdir /deployment
 
 ENV APP_FILE_NAME app.jar
