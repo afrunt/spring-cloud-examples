@@ -7,7 +7,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.Map;
+import java.util.function.Supplier;
 
 /**
  * @author Andrii Frunt
@@ -21,8 +24,17 @@ public class FibonacciService {
         int number = calculate(n);
 
         LOGGER.info("Fibonacci's number {} -> {}", n, number);
-
-        return Map.of("number", number);
+        Supplier<String> ipSupplier = () -> {
+            try {
+                return InetAddress.getLocalHost().getHostAddress();
+            } catch (UnknownHostException e) {
+                return "<unknown";
+            }
+        };
+        return Map.of(
+                "number", number,
+                "ip", ipSupplier.get()
+        );
     }
 
     private int calculate(int n) {

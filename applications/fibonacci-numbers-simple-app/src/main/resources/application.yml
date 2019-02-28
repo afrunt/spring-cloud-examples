@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: fibonacci-numberssimple-app
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

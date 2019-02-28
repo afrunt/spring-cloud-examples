@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: fibonacci-simple-rc
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fibonacci-numbers-simple-app
+  template:
+    metadata:
+      labels:
+        app: fibonacci-numbers-simple-app
+    spec:
+      containers:
+        - name: fibonacci-numbers-simple-app
+          image: afrunt/spring-cloud-examples-fibonacci-numbers-simple-app
+          ports:
+            - name: http
+              containerPort: 8080
+          readinessProbe:
+            initialDelaySeconds: 10
+            httpGet:
+              port: 8080
+              path: /actuator/health
+          livenessProbe:
+            initialDelaySeconds: 30
+            httpGet:
+              port: 8080
+              path: /actuator/health
+
+
+
