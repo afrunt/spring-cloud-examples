@@ -14,6 +14,8 @@
         <module>composite-config-server-example</module>
         <module>superhero-name</module>
         <module>consul-config-example</module>
+        <module>services</module>
+        <module>applications</module>
     </modules>
 
     <properties>
@@ -48,9 +50,9 @@
             </dependency>
 
             <dependency>
-                <groupId>com.afrunt.cloud</groupId>
-                <artifactId>commons</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <groupId>com.afrunt.examples</groupId>
+                <artifactId>fibonacci-number-service</artifactId>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
