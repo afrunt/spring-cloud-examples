@@ -17,17 +17,26 @@ spec:
           image: afrunt/spring-cloud-examples-fibonacci-numbers-simple-app
           ports:
             - name: http
-              containerPort: 8080
+              containerPort: 9090
           readinessProbe:
             initialDelaySeconds: 10
             httpGet:
-              port: 8080
+              port: 9090
               path: /actuator/health
           livenessProbe:
             initialDelaySeconds: 30
             httpGet:
-              port: 8080
+              port: 9090
               path: /actuator/health
+          volumeMounts:
+            - name: "config"
+              mountPath: "/deployment/config/bootstrap.yml"
+              subPath: "bootstrap.yml"
+      volumes:
+        - name: "config"
+          configMap:
+            name: "fibonacci-simple-cm"
+
 
 
 

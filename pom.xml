@@ -16,6 +16,7 @@
         <module>consul-config-example</module>
         <module>services</module>
         <module>applications</module>
+        <module>k8s</module>
     </modules>
 
     <properties>
@@ -52,6 +53,12 @@
             <dependency>
                 <groupId>com.afrunt.examples</groupId>
                 <artifactId>fibonacci-number-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.afrunt.examples</groupId>
+                <artifactId>fibonacci-number-consumer-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

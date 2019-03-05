@@ -1,7 +1,7 @@
 version: "3"
 services:
   eureka:
-    image: afrunt/spring-cloud-examples-superhero-name-eureka-server
+    image: afrunt/spring-cloud-examples-eureka-server-app
     ports:
       - 8000:8000
     environment:

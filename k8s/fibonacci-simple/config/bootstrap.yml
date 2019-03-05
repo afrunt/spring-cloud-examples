@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: FibonacciNumberService
+
+eureka:
+  client:
+    enabled: false

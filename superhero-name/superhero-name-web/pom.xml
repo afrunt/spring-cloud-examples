@@ -73,7 +73,6 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <configuration>
                     <useColor>true</useColor>
-
                     <images>
                         <image>
                             <name>afrunt/spring-cloud-examples-${project.artifactId}:${project.parent.version}</name>

@@ -12,7 +12,6 @@ spring:
   application:
     name: EurekaServer
 
-
 management:
   endpoints:
     web:

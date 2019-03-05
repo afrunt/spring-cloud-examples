@@ -11,8 +11,11 @@
 
     <artifactId>applications</artifactId>
     <packaging>pom</packaging>
+
     <modules>
+        <module>eureka-server-app</module>
         <module>fibonacci-numbers-simple-app</module>
+        <module>fibonacci-numbers-consumer-app</module>
     </modules>
 
 

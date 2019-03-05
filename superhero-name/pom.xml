@@ -11,8 +11,8 @@
 
     <artifactId>eureka-hystrix-openfeign-superhero-name</artifactId>
     <packaging>pom</packaging>
+
     <modules>
-        <module>superhero-name-eureka-server</module>
         <module>first-initial-service</module>
         <module>middle-initial-service</module>
         <module>last-initial-service</module>

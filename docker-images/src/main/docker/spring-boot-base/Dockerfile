@@ -1,5 +1,6 @@
 FROM afrunt/spring-cloud-examples-java-base
 RUN mkdir /deployment
+RUN mkdir /deployment/config
 
 ENV APP_FILE_NAME app.jar
 ENV MEM_MAX 256m
