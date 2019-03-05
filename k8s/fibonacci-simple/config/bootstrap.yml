@@ -1,7 +1,8 @@
 spring:
   application:
     name: FibonacciNumberService
-
-eureka:
-  client:
-    enabled: false
+  cloud:
+    kubernetes:
+      enabled: true
+      discovery:
+        enabled: true

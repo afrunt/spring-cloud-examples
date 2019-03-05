@@ -3,7 +3,7 @@ kind: ReplicaSet
 metadata:
   name: fibonacci-simple-rc
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: fibonacci-numbers-simple-app
